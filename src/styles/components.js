@@ -86,6 +86,7 @@ export const StyledJumbo = styled.div`
   & img{
     width: 35vw;
   };
+  
   ${above.medium`
     padding: 2rem 4rem;
     flex-direction: row;
@@ -122,8 +123,8 @@ export const StyledJumbo = styled.div`
     background-color: ${colors.darkBlue};
     z-index: -1;
     position: absolute;
-    transform: rotate(-19deg);
-    border-radius: 35%;
+    /* transform: rotate(-19deg);
+    border-radius: 35%; */
     top: -25%;
     width: 120%;
     height: 15rem;
