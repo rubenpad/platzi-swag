@@ -25,7 +25,8 @@
     "react-helmet": "^5.2.1",
     "react-typography": "0.16.19",
     "styled-components": "^4.3.1",
-    "typography": "0.16.19"
+    "typography": "0.16.19",
+    "typography-theme-moraga": "0.16.19"
   },
   "devDependencies": {
     "eslint": "6.8.0",
