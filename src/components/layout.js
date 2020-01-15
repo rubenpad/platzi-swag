@@ -17,7 +17,10 @@ const Layout = ({ children }) => (
     <Content>
       {children}
       <Footer>
-        <a href="https://www.platzi.com">Platzi</a>
+        <p>
+          Made with 💚 in Gatsby course at{' '}
+          <a href="https://www.platzi.com">Platzi</a>
+        </p>
       </Footer>
     </Content>
   </>
