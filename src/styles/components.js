@@ -348,7 +348,7 @@ export const Tag = styled.span`
   display: inline-block;
   margin: 0.5rem 0;
   color: white;
-  border-radius: 5px;
+  border-radius: 4px;
 `
 
 export const SizeButton = styled.button`
@@ -358,11 +358,12 @@ export const SizeButton = styled.button`
   color: #272727;
   opacity: ${({ unavailable }) => (unavailable ? 0.4 : 1)};
   transition: 0.4s all ease;
+  cursor: pointer;
   &:focus {
     outline: none;
   }
   &:hover {
-    transform: scale(1.2);
+    transform: scale(1.1);
   }
 `
 
@@ -370,6 +371,7 @@ export const QtyButton = styled.button`
   padding: 0.4rem;
   background-color: transparent;
   border: 2px solid rgba(0, 0, 0, 0.1);
+  cursor: pointer;
 `
 export const QtySelect = styled.div`
   display: flex;
@@ -413,13 +415,13 @@ export const Button = styled.button`
     type === 'outline' ? 'transparent' : colors.green};
   color: ${({ type }) => (type === 'outline' ? colors.darkBlue : 'white')};
   font-size: 0.9rem;
-  padding: 0.6rem 1rem;
+  padding: 0.3rem 1rem;
   font-weight: 500;
   border: ${({ type }) =>
     type === 'outline'
       ? `3px solid ${colors.darkBlue}`
       : `3px solid ${colors.green}`};
-  border-radius: 12px;
+  border-radius: 4px;
   a {
     text-decoration: none;
     color: ${({ type }) => (type === 'outline' ? colors.darkBlue : 'white')};
