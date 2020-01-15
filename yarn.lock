@@ -2220,7 +2220,7 @@ blob@0.0.5:
   resolved "https://registry.yarnpkg.com/blob/-/blob-0.0.5.tgz#d680eeef25f8cd91ad533f5b01eed48e64caf683"
   integrity sha512-gaqbzQPqOoamawKg0LGVd7SzLgXS+JH61oWprSLH+P+abTczqJbhTR8CmJ2u9/bUYNmHTGJx/UEmn6doAvvuig==
 
-bluebird@^3.5.5, bluebird@^3.7.2:
+bluebird@^3.5.5, bluebird@^3.7.1, bluebird@^3.7.2:
   version "3.7.2"
   resolved "https://registry.yarnpkg.com/bluebird/-/bluebird-3.7.2.tgz#9f229c15be272454ffa973ace0dbee79a1b0c36f"
   integrity sha512-XpNj6GDQzdfW+r2Wnn7xiSAd7TM3jzkxGXBGTtWKuSXv1xUV+azxAm8jdWZN06QTQk+2N2XB9jRDkvbmQmcRtg==
@@ -4012,7 +4012,7 @@ dot-prop@^5.1.0:
   dependencies:
     is-obj "^2.0.0"
 
-dotenv@^8.2.0:
+dotenv@8.2.0, dotenv@^8.2.0:
   version "8.2.0"
   resolved "https://registry.yarnpkg.com/dotenv/-/dotenv-8.2.0.tgz#97e619259ada750eea3e4ea3e26bceea5424b16a"
   integrity sha512-8sJ78ElpbDJBHNeBzUbUVLsqKdccaa/BXF1uPTw3GrvQTBgrQrtObr2mUrE38vzYd8cEv+m/JBfDLioYcfXoaw==
@@ -5228,6 +5228,14 @@ gatsby-cli@^2.8.22:
     ink "^2.6.0"
     ink-spinner "^3.0.1"
 
+gatsby-core-utils@^1.0.20:
+  version "1.0.26"
+  resolved "https://registry.yarnpkg.com/gatsby-core-utils/-/gatsby-core-utils-1.0.26.tgz#e1cbdfad498d58d677d9d74f21a1ede661b49d6f"
+  integrity sha512-NPflmXmyTcg3x2mp6cqp/51QeAHRKepfbf0X4erDsnVlewFJuGTe+25ZJvWkkwU2g1cPAxuwzlPe0jOL92iU4A==
+  dependencies:
+    ci-info "2.0.0"
+    node-object-hash "^2.0.0"
+
 gatsby-core-utils@^1.0.25:
   version "1.0.25"
   resolved "https://registry.yarnpkg.com/gatsby-core-utils/-/gatsby-core-utils-1.0.25.tgz#8cc8e76a79063c43ac06d9b72100b7c6f1fb5b60"
@@ -5343,6 +5351,11 @@ gatsby-plugin-sharp@^2.0.37:
     svgo "1.3.2"
     uuid "^3.3.3"
 
+gatsby-plugin-stripe@1.2.3:
+  version "1.2.3"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-stripe/-/gatsby-plugin-stripe-1.2.3.tgz#bac761bb6ecc6ac4ddd6274537418a5cffa560e8"
+  integrity sha512-iE+6HiiHFG6XdQQh4qBRCuR/PfdN1vZ1XhhCueeUAbZ5mCY0KH0hgoOFJEFNAtCGFAFmeUWBRhMSYnBE3pjFFw==
+
 gatsby-plugin-styled-components@3.1.17:
   version "3.1.17"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-styled-components/-/gatsby-plugin-styled-components-3.1.17.tgz#d17ee15608b42b33a82b25035f2824e80c77a64c"
@@ -5366,6 +5379,27 @@ gatsby-react-router-scroll@^2.1.19:
     scroll-behavior "^0.9.10"
     warning "^3.0.0"
 
+gatsby-source-filesystem@2.1.38:
+  version "2.1.38"
+  resolved "https://registry.yarnpkg.com/gatsby-source-filesystem/-/gatsby-source-filesystem-2.1.38.tgz#174fbef19826844c92e5679cb2e379eeb52acf80"
+  integrity sha512-GMsuE2lVvvKwngGSULYiLlwErU0og5TSDaSz8B/yqgqGw0EGaZc3vdcpk4PioEzHQSIR6usDCjubfmN0t3zRYw==
+  dependencies:
+    "@babel/runtime" "^7.7.2"
+    better-queue "^3.8.10"
+    bluebird "^3.7.1"
+    chokidar "3.3.0"
+    file-type "^12.4.0"
+    fs-extra "^8.1.0"
+    gatsby-core-utils "^1.0.20"
+    got "^7.1.0"
+    md5-file "^3.2.3"
+    mime "^2.4.4"
+    pretty-bytes "^5.3.0"
+    progress "^2.0.3"
+    read-chunk "^3.2.0"
+    valid-url "^1.0.9"
+    xstate "^4.6.7"
+
 gatsby-source-filesystem@^2.0.39:
   version "2.1.43"
   resolved "https://registry.yarnpkg.com/gatsby-source-filesystem/-/gatsby-source-filesystem-2.1.43.tgz#02652b41fcdd8999b2b2107edecdec8703273620"
@@ -5386,6 +5420,14 @@ gatsby-source-filesystem@^2.0.39:
     read-chunk "^3.2.0"
     valid-url "^1.0.9"
     xstate "^4.7.2"
+
+gatsby-source-stripe@3.0.5:
+  version "3.0.5"
+  resolved "https://registry.yarnpkg.com/gatsby-source-stripe/-/gatsby-source-stripe-3.0.5.tgz#373409d11255b7ca4667ef96c43201b725f20f2e"
+  integrity sha512-5bhdqCHwi8WENoRaw5HBpX/I7Ix8/evbBYY1ou1JSsXv2T3sgRCddVF7v9g12O3Pqde1j6fdVYS5kl50ccI8pQ==
+  dependencies:
+    gatsby-source-filesystem "2.1.38"
+    stripe "7.13.1"
 
 gatsby-telemetry@^1.1.46:
   version "1.1.46"
@@ -9576,6 +9618,11 @@ qs@6.7.0:
   resolved "https://registry.yarnpkg.com/qs/-/qs-6.7.0.tgz#41dc1a015e3d581f1621776be31afb2876a9b1bc"
   integrity sha512-VCdBRNFTX1fyE7Nb6FYoURo/SPe62QCaAyzJvUjwRaIsc+NePBEniHlvxFmmX56+HZphIGtV0XeCirBtpDrTyQ==
 
+qs@^6.6.0:
+  version "6.9.1"
+  resolved "https://registry.yarnpkg.com/qs/-/qs-6.9.1.tgz#20082c65cb78223635ab1a9eaca8875a29bf8ec9"
+  integrity sha512-Cxm7/SS/y/Z3MHWSxXb8lIFqgqBowP5JMlTUFyJN88y0SGQhVmZnqFK/PeuMX9LzUyWsqqhNxIyg0jlzq946yA==
+
 qs@~6.5.2:
   version "6.5.2"
   resolved "https://registry.yarnpkg.com/qs/-/qs-6.5.2.tgz#cb3ae806e8740444584ef154ce8ee98d403f3e36"
@@ -11122,6 +11169,13 @@ strip-outer@^1.0.0:
   dependencies:
     escape-string-regexp "^1.0.2"
 
+stripe@7.13.1:
+  version "7.13.1"
+  resolved "https://registry.yarnpkg.com/stripe/-/stripe-7.13.1.tgz#602cd748363336b2b22e9cd698ab58fb59088cc9"
+  integrity sha512-aF9F/M10MulZumSrwoDULBOZKqNUvyYA22Bg6u98VJEH/2Dck60W1FcT793WhsHHa/+z6TPR/8Ev7GNq1+SYOQ==
+  dependencies:
+    qs "^6.6.0"
+
 style-loader@^0.23.1:
   version "0.23.1"
   resolved "https://registry.yarnpkg.com/style-loader/-/style-loader-0.23.1.tgz#cb9154606f3e771ab6c4ab637026a1049174d925"
@@ -12338,6 +12392,11 @@ xmlhttprequest-ssl@~1.5.4:
   version "1.5.5"
   resolved "https://registry.yarnpkg.com/xmlhttprequest-ssl/-/xmlhttprequest-ssl-1.5.5.tgz#c2876b06168aadc40e57d97e81191ac8f4398b3e"
   integrity sha1-wodrBhaKrcQOV9l+gRkayPQ5iz4=
+
+xstate@^4.6.7:
+  version "4.7.6"
+  resolved "https://registry.yarnpkg.com/xstate/-/xstate-4.7.6.tgz#52907b0232ff78406077ad095eb1ad6bbc6c77cb"
+  integrity sha512-TjBk1/uOxu2yxSQW0eNNasOvKMtg+4KknlkM57Pw9D+jF124nLz+Qo4nEcC98rR6YMw4d9VxunIb5XzOjgLqlQ==
 
 xstate@^4.7.2:
   version "4.7.5"
