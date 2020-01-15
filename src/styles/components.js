@@ -1,13 +1,13 @@
-import styled from "styled-components"
-import { above } from "./index"
+import styled from 'styled-components'
+import { above } from './index'
 
 export const colors = {
-  green: "#98ca3f",
-  orange: "#f8b71c",
-  gray: "#969696",
-  darkBlue: "#1c3643",
-  lightBlue: "#1e5372",
-  softGray: "#f6f8f9",
+  green: '#98ca3f',
+  orange: '#f8b71c',
+  gray: '#969696',
+  darkBlue: '#1c3643',
+  lightBlue: '#1e5372',
+  softGray: '#f6f8f9',
 }
 
 export const StyledHeader = styled.header`
@@ -16,7 +16,7 @@ export const StyledHeader = styled.header`
     ${colors.darkBlue},
     ${colors.lightBlue}
   );
-  margin-bottom: 0;
+
   padding: 0 0.5rem 0 0;
   height: 3.5rem;
   width: 100%;
@@ -32,8 +32,7 @@ export const StyledHeader = styled.header`
   }
   & > a > img {
     margin: 0;
-    background-color: ${colors.green};
-    height: 100%;
+    height: 90%;
     padding: 0.5rem 0.8rem;
   }
   & ul {
@@ -59,6 +58,7 @@ export const StyledHeader = styled.header`
     }
   `}
 `
+
 export const StyledJumbo = styled.div`
   display: flex;
   align-items: center;
@@ -86,7 +86,6 @@ export const StyledJumbo = styled.div`
   & img{
     width: 35vw;
   };
-  
   ${above.medium`
     padding: 2rem 4rem;
     flex-direction: row;
@@ -116,15 +115,14 @@ export const StyledJumbo = styled.div`
       font-size: 2rem;
     };
   `}
-
   &:before{
     content: " ";
     background-color: red;
     background-color: ${colors.darkBlue};
     z-index: -1;
     position: absolute;
-    /* transform: rotate(-19deg);
-    border-radius: 35%; */
+    transform: rotate(-19deg);
+    border-radius: 35%;
     top: -25%;
     width: 120%;
     height: 15rem;
@@ -142,7 +140,6 @@ export const StyledJumbo = styled.div`
       top: -66%;
     `}
   };
-
 `
 
 export const StyledProducts = styled.div`
@@ -310,7 +307,7 @@ export const MenuItem = styled.li`
   color: white;
   font-size: 1.3rem;
   font-weight: 100;
-  padding: ${({ margin }) => (margin ? "0 13px 0 13px" : "0 0 0 13px")};
+  padding: ${({ margin }) => (margin ? '0 13px 0 13px' : '0 0 0 13px')};
   a {
     color: white;
     text-decoration: none;
@@ -320,8 +317,8 @@ export const MenuItem = styled.li`
     width: 0.4rem;
   }
   ${above.medium`
-    border-right: ${({ margin }) => (margin ? "1px solid white" : "")};
-    padding: ${({ margin }) => (margin ? "0 26px 0 26px" : "0 0 0 26px")};
+    border-right: ${({ margin }) => (margin ? '1px solid white' : '')};
+    padding: ${({ margin }) => (margin ? '0 26px 0 26px' : '0 0 0 26px')};
     & img{
       margin-right: 5px; 
       width: 0.7rem;
@@ -335,7 +332,7 @@ export const Footer = styled.footer`
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 2rem;
+  padding: 1rem;
   position: relative;
   bottom: 0;
   a {
@@ -413,19 +410,19 @@ export const SizeSelect = styled.div`
 export const Button = styled.button`
   cursor: pointer;
   background-color: ${({ type }) =>
-    type === "outline" ? "transparent" : colors.green};
-  color: ${({ type }) => (type === "outline" ? colors.darkBlue : "white")};
+    type === 'outline' ? 'transparent' : colors.green};
+  color: ${({ type }) => (type === 'outline' ? colors.darkBlue : 'white')};
   font-size: 0.9rem;
   padding: 0.6rem 1rem;
   font-weight: 500;
   border: ${({ type }) =>
-    type === "outline"
+    type === 'outline'
       ? `3px solid ${colors.darkBlue}`
       : `3px solid ${colors.green}`};
   border-radius: 12px;
   a {
     text-decoration: none;
-    color: ${({ type }) => (type === "outline" ? colors.darkBlue : "white")};
+    color: ${({ type }) => (type === 'outline' ? colors.darkBlue : 'white')};
   }
   &:disabled {
     background-color: ${colors.gray};

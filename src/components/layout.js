@@ -15,7 +15,7 @@ const Layout = ({ children }) => (
   <>
     <Header />
     <Content>
-      <main>{children}</main>
+      {children}
       <Footer>
         <a href="https://www.platzi.com">Platzi</a>
       </Footer>

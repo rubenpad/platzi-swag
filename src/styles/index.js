@@ -1,4 +1,4 @@
-import { css, createGlobalStyle } from "styled-components"
+import { css, createGlobalStyle } from 'styled-components'
 
 export const size = {
   small: 400,
@@ -20,9 +20,22 @@ export const GlobalStyles = createGlobalStyle`
   .___gatsby{
     position: absolute;
   }
-  main{
-    padding-top: 3.5rem;
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
   }
+
+  ul, ol {
+    list-style: none;
+  }
+
+  a {
+    text-decoration: none;
+    color: #fff;
+  }
+  
   ${above.medium`
    main{
       padding-top: calc(3.5rem - 100vh);
