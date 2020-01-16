@@ -5,8 +5,8 @@ require('dotenv').config({
 module.exports = {
   siteMetadata: {
     title: `Platzi Swag`,
-    description: `Platzi Swag`,
-    author: `@gatsbyjs`,
+    description: `El mejor swag de platzi disponible para ti.`,
+    author: `@rubbenpad`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -41,7 +41,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-styled-components`,
       options: {
-        displayName: false,
+        displayName: `${process.env.NODE_ENV !== 'production'}`,
       },
     },
     {

@@ -1,3 +1,5 @@
+import { Link } from 'gatsby'
+
 import styled from 'styled-components'
 import { above } from './index'
 
@@ -16,47 +18,36 @@ export const StyledHeader = styled.header`
     ${colors.darkBlue},
     ${colors.lightBlue}
   );
-
-  padding: 0 0.5rem 0 0;
-  height: 3.5rem;
+  
   width: 100%;
-  max-width: 960;
+  max-width: 100%;
+  height: 80px;
   display: flex;
-  position: fixed;
-  z-index: 3;
   align-items: center;
   justify-content: space-between;
-  a {
+  position: fixed;
+  z-index: 3;
+`
+
+export const Logo = styled(Link)`
+  height: 50%;
+  margin-left: 2rem;
+
+  img {
     height: 100%;
-    font-size: 0.6rem;
+    object-fit: cover;
   }
-  & > a > img {
-    margin: 0;
-    height: 90%;
-    padding: 0.5rem 0.8rem;
-  }
-  & ul {
-    list-style: none;
-    margin: 0;
+`
+
+export const Menu = styled.nav`
+  margin-right: 2rem;
+  ul {
     display: flex;
-    font-size: 0.2rem;
+    margin: 0;
+    a {
+      font-size: 1rem;
+    }
   }
-  ${above.medium`
-    padding: 0 2rem;
-    height: 3.5rem;
-    a{
-      height: 100%;
-      font-size: 0.8rem;
-    }
-  `}
-  ${above.large`
-    padding: 0 10rem;
-    height: 4.5rem;
-    a{
-      height: 100%;
-      font-size: 0.8rem;
-    }
-  `}
 `
 
 export const StyledJumbo = styled.div`
@@ -64,7 +55,7 @@ export const StyledJumbo = styled.div`
   align-items: center;
   flex-direction: column;
   justify-content: center;
-  padding: 2rem 2rem;
+  padding: 5rem 0 0 0;
   color: white;
   margin-bottom: 5rem;
   overflow: hidden;
@@ -72,7 +63,7 @@ export const StyledJumbo = styled.div`
   
   div{
     padding: 1rem;
-    width: 35vw;
+    width: 90vw
   };
   & h2 {
     margin: 0;
@@ -121,11 +112,12 @@ export const StyledJumbo = styled.div`
     background-color: ${colors.darkBlue};
     z-index: -1;
     position: absolute;
-    transform: rotate(-19deg);
+    transform: rotate(-9deg);
     border-radius: 35%;
-    top: -25%;
+    top: -15%;
     width: 120%;
     height: 15rem;
+
     ${above.medium`
       height: 20rem;
       top: -50%;
@@ -152,21 +144,29 @@ export const StyledProducts = styled.div`
     color: ${colors.darkBlue};
     font-size: 2rem;
   }
-  & img {
-    width: 100%;
-    height: 400px;
-    object-fit: cover;
-    object-position: center;
-    margin: 0;
-  }
+
   article {
     display: flex;
     flex-direction: column;
     background: white;
     align-items: center;
+    justify-content: space-between;
     padding-bottom: 1rem;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
     transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+
+    & img {
+      object-fit: cover;
+      object-position: center;
+      margin: 0;
+    }
+
+    div {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
     p {
       margin: 0;
       color: ${colors.green};
@@ -179,7 +179,6 @@ export const StyledProducts = styled.div`
       font-size: 1.2rem;
     }
     a {
-      text-decoration: none;
       color: ${colors.darkBlue};
       font-size: 0.8rem;
       border-bottom: 3px solid ${colors.green};
@@ -207,63 +206,37 @@ export const StyledProducts = styled.div`
 `
 
 export const StyledProductDetail = styled.div`
-  padding: 1rem;
+  width: 100%;
+  margin-bottom: 2rem;
+  padding-top: 9.5rem;
   display: flex;
-  flex-direction: column;
-  text-align: justify;
-  height: 82vh;
-  img {
-    width: 100%;
-    object-fit: cover;
-    object-position: center;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  * {
     margin: 0;
   }
-  p {
-    color: #171717;
-    font-weight: 500;
-    margin: 0;
-    font-size: 0.9rem;
-  }
-  & b {
-    color: ${colors.green};
-    font-size: 1.5rem;
-    margin: 0;
-    font-weight: 800;
-  }
-  h2,
-  h3 {
-    margin: 0;
-  }
-  small {
-    margin: 0;
-    color: #505050;
-    text-align: justify;
-  }
-  div {
-    img {
-      width: 20px;
-      margin: 0.5rem 0;
-      display: block;
-      fill: red;
-    }
-  }
+
   ${above.medium`
-    padding: 1rem 3rem;
-    flex-direction: column;
-    img{
+    img {
       margin-right: 2rem;
     }
-    `}
-  ${above.large`
-    flex-direction: row;
-    height: 82vh;
-    padding: 2rem 10rem;
+  `}
+`
+
+export const Actions = styled.div`
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+
+  ${above.medium`
+    width: 300px;
   `}
 `
 
 export const StyledCart = styled.div`
   padding: 1rem;
-  height: 80vh;
+  height: 90vh;
   overflow-y: scroll;
   h2 {
     border-bottom: 2px solid ${colors.darkBlue};
@@ -327,18 +300,14 @@ export const MenuItem = styled.li`
 `
 
 export const Footer = styled.footer`
+  height: 70px;
   background-color: ${colors.darkBlue};
-  color: white;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 1rem;
-  position: relative;
-  bottom: 0;
+  color: white;
   a {
     color: ${colors.green};
-    margin-left: 0.3rem;
-    text-decoration: none;
   }
 `
 
@@ -354,7 +323,8 @@ export const Tag = styled.span`
 export const SizeButton = styled.button`
   padding: calc(0.4rem + 1px);
   background-color: transparent;
-  border: 2px solid rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 3px;
   color: #272727;
   opacity: ${({ unavailable }) => (unavailable ? 0.4 : 1)};
   transition: 0.4s all ease;
@@ -363,7 +333,7 @@ export const SizeButton = styled.button`
     outline: none;
   }
   &:hover {
-    transform: scale(1.1);
+    background: ${colors.green};
   }
 `
 
@@ -404,9 +374,9 @@ export const SizeSelect = styled.div`
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 8px;
   font-size: 0.8rem;
-  margin-top: 0.6rem;
+  margin: 0.6rem 0;
   button:nth-child(${props => props.selected}) {
-    border: 2px solid rgba(0, 0, 0, 0.3);
+    background: ${colors.green};
   }
 `
 export const Button = styled.button`
@@ -444,8 +414,8 @@ export const SelectStars = styled.div`
   }
 `
 export const Purchase = styled.div`
-  width: 100vw;
-  height: calc(100vh - 4.5rem - 101px);
+  width: 100%;
+  height: 90vh;
   background-color: white;
   display: flex;
   flex-direction: column;
@@ -462,11 +432,4 @@ export const Purchase = styled.div`
   }
 `
 
-export const Content = styled.div`
-  ${above.medium`
-    padding-top: 3.5rem;
-    `}
-  ${above.large`
-    padding-top: 4.5rem;
-  `}
-`
+export const Content = styled.div``

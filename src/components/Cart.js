@@ -9,7 +9,6 @@ export default function Cart() {
   const { cart } = useContext(CartContext)
   const [total, setTotal] = useState(0)
   const [stripe, setStripe] = useState()
-  console.log(cart)
 
   const getTotal = () => {
     setTotal(

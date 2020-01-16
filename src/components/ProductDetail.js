@@ -11,6 +11,7 @@ import {
   Button,
   SizeSelect,
   StyledProductDetail,
+  Actions,
 } from '../styles/components'
 
 export default function ProductDetail({
@@ -33,31 +34,35 @@ export default function ProductDetail({
     <StyledProductDetail>
       <SEO title={name} />
       <img src={metadata.img} alt={name} />
-      <div>
-        <Tag>Popular</Tag>
+      <Actions>
         <h2>{name}</h2>
         <b>USD {formattedPrice}</b>
         <Starts />
         {metadata.wear && (
-          <SizeSelect selected={size}>
-            <SizeButton onClick={() => setSize(1)}>XS</SizeButton>
-            <SizeButton onClick={() => setSize(2)}>S</SizeButton>
-            <SizeButton onClick={() => setSize(3)}>M</SizeButton>
-            <SizeButton onClick={() => setSize(4)}>L</SizeButton>
-          </SizeSelect>
+          <>
+            <p>Tallas</p>
+            <SizeSelect selected={size}>
+              <SizeButton onClick={() => setSize(1)}>XS</SizeButton>
+              <SizeButton onClick={() => setSize(2)}>S</SizeButton>
+              <SizeButton onClick={() => setSize(3)}>M</SizeButton>
+              <SizeButton onClick={() => setSize(4)}>L</SizeButton>
+            </SizeSelect>
+          </>
         )}
-        <p>Cantidad:</p>
-        <QtySelect>
-          <QtyButton
-            onClick={() => (quantity > 1 ? setQuantity(quantity - 1) : null)}
-          >
-            -
-          </QtyButton>
-          <input type="text" disabled value={quantity} />
-          <QtyButton onClick={() => setQuantity(quantity + 1)}>+</QtyButton>
-        </QtySelect>
-        <Button onClick={handleSubmit}>Agregar</Button>
-      </div>
+        <div>
+          <p>Cantidad:</p>
+          <QtySelect>
+            <QtyButton
+              onClick={() => (quantity > 1 ? setQuantity(quantity - 1) : null)}
+            >
+              -
+            </QtyButton>
+            <input type="text" disabled value={quantity} />
+            <QtyButton onClick={() => setQuantity(quantity + 1)}>+</QtyButton>
+          </QtySelect>
+        </div>
+        <Button onClick={handleSubmit}>Agregar al carrito</Button>
+      </Actions>
     </StyledProductDetail>
   )
 }

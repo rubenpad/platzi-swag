@@ -17,8 +17,9 @@ export const above = Object.keys(size).reduce((acc, label) => {
 }, {})
 
 export const GlobalStyles = createGlobalStyle`
-  .___gatsby{
-    position: absolute;
+
+  #__gatsby {
+    height: 100vh;
   }
 
   * {
